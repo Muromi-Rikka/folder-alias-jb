@@ -24,6 +24,13 @@ repositories {
     mavenCentral()
 }
 
+
+dependencies {
+    implementation("com.google.code.gson:gson:2.9.0")
+}
+
+
+
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
     pluginName.set(properties("pluginName"))

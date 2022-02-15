@@ -7,12 +7,15 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.muromirikka.folderaliasjb.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.muromirikka.folderaliasjb.services.MyProjectService"/>
+        <projectService serviceImplementation="com.github.muromirikka.folderaliasjb.service.ProjectService" />
+        <treeStructureProvider implementation="com.github.muromirikka.folderaliasjb.tree.FolderAliasTreeStructureProvider" />
     </extensions>
+    <actions>
+        <group id="FolderAlias.Group" text="Add Alias" popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="ReplaceInPath" />
+            <action id="AddTextAlias" class="com.github.muromirikka.folderaliasjb.action.ActionDescription" text="Add Text" description="添加文字描述" />
 
-    <applicationListeners>
-        <listener class="com.github.muromirikka.folderaliasjb.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+        </group>
+    </actions>
+
 </idea-plugin>

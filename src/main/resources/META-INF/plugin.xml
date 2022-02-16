@@ -8,7 +8,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceImplementation="com.github.muromirikka.folderaliasjb.service.ProjectService" />
-        <treeStructureProvider implementation="com.github.muromirikka.folderaliasjb.tree.FolderAliasTreeStructureProvider" />
+<!--        <treeStructureProvider implementation="com.github.muromirikka.folderaliasjb.tree.FolderAliasTreeStructureProvider" />-->
+        <projectViewNodeDecorator implementation="com.github.muromirikka.folderaliasjb.decorator.AliasViewNodeDecorator" />
     </extensions>
     <actions>
         <group id="FolderAlias.Group" text="Add Alias" popup="true">

@@ -1,10 +1,12 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.muromirikka.folderaliasjb</id>
-    <name>folder-alias-jb</name>
-    <vendor>muromi-rikka</vendor>
+    <name>Folder Alias</name>
+    <vendor email="admin@rikka.cc">muromi-rikka</vendor>
 
+    <version>0.0.2</version>
     <depends>com.intellij.modules.platform</depends>
+
 
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceImplementation="com.github.muromirikka.folderaliasjb.service.ProjectService" />
@@ -14,7 +16,7 @@
     <actions>
         <group id="FolderAlias.Group" text="Add Alias" popup="true">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="ReplaceInPath" />
-            <action id="AddTextAlias" class="com.github.muromirikka.folderaliasjb.action.ActionDescription" text="Add Text" description="添加文字描述" />
+            <action id="AddTextAlias" class="com.github.muromirikka.folderaliasjb.action.ActionDescription" text="Add Text" />
 
         </group>
     </actions>
